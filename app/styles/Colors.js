@@ -1,0 +1,18 @@
+export default {
+    turbo: '#ffaf40',
+    gold: '#f1c40f',
+    shadowSteel: '#4b4b4b',
+    aspestos: '#7f8c8d',
+    pumpkin: '#d35400',
+    midnightBlue: '#2c3e50',
+    belizeHole: '#2980b9',
+    electronBlue: '#0984e3',
+    silver: '#bdc3c7',
+    green: '#38ae04',
+    clouded: '#ecf0f1',
+    alizarin: '#e74c3c',
+    grey: '#e6e6e6',
+    lightGrey:'#f1f1f1',
+    darkGrey:'#c1c1c1',
+    black: '#292929',
+}

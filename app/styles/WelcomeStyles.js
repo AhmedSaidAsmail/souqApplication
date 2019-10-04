@@ -1,0 +1,280 @@
+import Fonts from './Fonts';
+import Colors from './Colors';
+import {searchBarHeight} from '../../app.json';
+import {StyleSheet} from 'react-native';
+
+export default {
+    carouselContainer: {
+        height: 180,
+        marginTop: searchBarHeight,
+    },
+    welcomeCategoryWrapper: {
+        marginLeft: 15,
+    },
+    welcomeCategoryImageWrapper: {
+        width: 90,
+        height: 90,
+        borderRadius: 45,
+        backgroundColor: Colors.gold,
+        padding: 10,
+    },
+    welcomeCategoryImage: {
+        flex: 1,
+        resizeMode: 'contain',
+        width: null,
+        height: null,
+    },
+    welcomeCategoryText: {
+        textAlign: 'center',
+        fontFamily: Fonts.elMessiriSemiBold,
+        fontSize: 16,
+    },
+    headerWrapper: {
+        flex: 1,
+        flexDirection: 'row-reverse',
+        marginHorizontal: 10,
+        marginTop: 10,
+        marginBottom: 10,
+        // borderColor: Colors.black,
+        // borderWidth: 1,
+        borderRadius: 5,
+        paddingVertical: 8,
+        paddingHorizontal: 20,
+        backgroundColor: Colors.gold,
+        shadowColor: '#000000',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 4,
+    },
+    headerText: {
+        flex: 1,
+        justifyContent: 'center',
+    },
+    mainHeader: {
+        fontFamily: Fonts.elMessiriBold,
+        color: Colors.black,
+        fontSize: 18,
+        // marginRight: 15,
+    },
+    headerButtonWrapper: {
+        flex: 1,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+    },
+    headerButton: {
+        borderColor: '#e4bc1b',
+        backgroundColor: Colors.black,
+        borderWidth: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // marginLeft: 15,
+        paddingHorizontal: 30,
+        paddingVertical: 3,
+    },
+    headerButtonText: {
+        fontFamily: Fonts.elMessiriBold,
+        color: '#ffffff',
+        fontSize: 16,
+    },
+// products wrapper
+    itemsContainer: {
+        scaleX: -1,
+        backgroundColor: Colors.lightGrey,
+    },
+    itemWrapper: {
+        width: 160,
+        height: 250,
+        borderWidth: 1,
+        borderColor: Colors.darkGrey,
+        backgroundColor: '#ffffff',
+        marginLeft: 10,
+        marginVertical: 10,
+        marginBottom: 10,
+        scaleX: -1,
+        // shadowColor: '#000',
+        // shadowOffset: {width: 0, height: 2},
+        // shadowOpacity: 0.8,
+        // shadowRadius: 2,
+        // elevation: 5,
+    },
+    itemImageWrapper: {
+        flex: 4,
+        position: 'relative',
+    },
+    itemImageHolder: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+        marginHorizontal: 10,
+        marginTop: 10,
+        overflow: 'hidden',
+    },
+    itemImage: {
+        flex: 1,
+        resizeMode: 'contain',
+    },
+    itemFavorite: {
+        position: 'absolute',
+        top: 10,
+        left: 5,
+        width: 30,
+        height: 30,
+        zIndex: 2,
+    },
+    itemFavoriteIcon: {
+        fontSize: 30,
+        color: Colors.darkGrey,
+    },
+    itemContent: {
+        flex: 1,
+        paddingHorizontal: 10,
+        paddingBottom: 10,
+    },
+    itemTitle: {
+        fontFamily: Fonts.elMessiriBold,
+        fontSize: 14,
+    },
+    itemBottom: {
+        alignSelf: 'flex-end',
+        flexDirection: 'row',
+        paddingBottom: 10,
+    },
+    itemBottomPrice: {
+        flex: 5,
+        position: 'relative',
+        alignItems: 'flex-start',
+        marginLeft: 10,
+        backgroundColor: Colors.alizarin,
+        borderTopLeftRadius: 18,
+        borderBottomLeftRadius: 18,
+    },
+    itemBottomCurrentPrice: {
+        fontFamily: Fonts.elMessiriBold,
+        fontSize: 16,
+        color: '#ffffff',
+        paddingTop: 5,
+        paddingLeft: 15,
+    },
+    itemBottomOldPrice: {
+        flexDirection: 'row',
+        position: 'absolute',
+        left: 0,
+        bottom: '100%',
+        justifyContent: 'center',
+    },
+    itemBottomOldPriceNumber: {
+        fontFamily: Fonts.elMessiriMedium,
+        textDecorationLine: 'line-through',
+        fontSize: 11,
+    },
+    itemBottomDiscountPercentage: {
+        backgroundColor: 'rgba(56, 174, 4, 0.3)',
+        color:
+        Colors.green,
+        fontFamily:
+        Fonts.robotoBold,
+        paddingHorizontal: 7,
+        marginLeft: 7,
+    },
+    itemBottomAddToCart: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-start',
+        position: 'relative',
+        height: 36,
+    },
+    itemBottomAddToCartButton: {
+        position: 'absolute',
+        left: -18,
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        backgroundColor: Colors.electronBlue,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    itemBottomAddToCartIcon: {
+        color: '#ffffff',
+        fontSize: 20,
+    },
+    // main categories banners
+
+    mainCategoryWelcomeBanner: {
+        flex: 1,
+        position: 'relative',
+        height: 200,
+        marginHorizontal: 7,
+        marginBottom: 10,
+        backgroundColor: '#213f59',
+    },
+    minCategoryWelcomeImageWrapper: {
+        ...StyleSheet.absoluteFillObject,
+        zIndex: 1,
+        right: -5,
+        top: 10,
+        alignItems: 'flex-end',
+
+    },
+    minCategoryWelcomeImage: {
+        height: 200,
+    },
+    mainCategoryWelcomeEnTitle: {
+        marginTop: 15,
+        paddingLeft: 20,
+        fontFamily: Fonts.robotoBold,
+        fontSize: 17,
+        width: '50%',
+        textAlign: 'right',
+        color: '#ffffff',
+    },
+    mainCategoryWelcomeArTitle: {
+        width: '50%',
+        textAlign: 'right',
+        color: Colors.gold,
+        fontFamily: Fonts.elMessiriMedium,
+        fontSize: 18,
+    },
+    categoriesWelcomeBannerWrapper: {
+        flex: 1,
+        flexDirection: 'row',
+    },
+    categoryWelcomeBanner: {
+        flex: 1,
+        position: 'relative',
+        height: 110,
+        marginHorizontal: 7,
+        paddingVertical: 10,
+    },
+    categoryWelcomeImageWrapper: {
+        ...StyleSheet.absoluteFillObject,
+        left: null,
+        width: '50%',
+        zIndex: 1,
+    },
+    categoryWelcomeImage: {
+        height: '100%',
+        width: '100%',
+        resizeMode: 'contain',
+    },
+    categoryWelcomeEnTitleWrapper: {
+        flex: 3,
+        backgroundColor: '#213f59',
+        alignSelf: 'stretch',
+        justifyContent: 'flex-end',
+    },
+    categoryWelcomeEnTitle: {
+        fontFamily: Fonts.robotoBold,
+        fontSize: 11,
+        color: '#ffffff',
+        padding: 7,
+    },
+    categoryWelcomeArTitleWrapper: {
+        flex: 1,
+    },
+    categoryWelcomeArTitle: {
+        fontFamily: Fonts.elMessiriMedium,
+        fontSize: 14,
+        textAlign: 'left',
+    },
+}
