@@ -16,7 +16,7 @@ export default createStackNavigator({
     mode: 'modal',
     defaultNavigationOptions: ({navigation}) => {
         return {
-            header: <Header {...navigation}/>,
+            header: <Header {...navigation} back={true}/>,
             gesturesEnabled: true,
         }
     },

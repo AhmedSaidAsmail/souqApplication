@@ -12,7 +12,9 @@ export default {
     clouded: '#ecf0f1',
     alizarin: '#e74c3c',
     grey: '#e6e6e6',
-    lightGrey:'#f1f1f1',
-    darkGrey:'#c1c1c1',
+    lightGrey: '#f1f1f1',
+    darkGrey: '#c1c1c1',
     black: '#292929',
+    navigationGrey: '#f6f6f6',
+    navigationActiveColor: '#3f434c',
 }

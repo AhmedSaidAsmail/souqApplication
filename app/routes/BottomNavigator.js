@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Text} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createStackNavigator} from 'react-navigation-stack';
 import stackNavigator from './StackNavigator';
 import {Colors, Main} from '../styles';
 import Octicons from 'react-native-vector-icons/Octicons';
@@ -39,16 +40,17 @@ const bottomScreensDetails = {
         IconComponent: Fontisto,
     },
 };
+const mainCategoryStack = createStackNavigator({MainCategoryScreen});
 export default createBottomTabNavigator({
 
     Home: stackNavigator,
-    MainCategory: MainCategoryScreen,
+    MainCategory: mainCategoryStack,
     Offers: OffersScreen,
     Profile: ProfileScreen,
     Cart: CartScreen,
 }, {
     order: Object.keys(bottomScreensDetails).reverse(),
-    initialRouteName: 'Home',
+    initialRouteName: 'MainCategory',
     tabBarOptions: {
         activeTintColor: Colors.pumpkin,
         inactiveTintColor: 'black',

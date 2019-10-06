@@ -11,7 +11,7 @@ export default (navigation) => {
         <View style={{...Main.header, height: 50}}>
             <StatusBar backgroundColor={Colors.gold}/>
             <View style={{...Main.logoWrapper}}>
-                {routeName !== "Home" && (
+                {routeName !== "Home" && navigation.back && (
                     <TouchableOpacity
                         style={Main.headerBackButton}
                         onPress={(navigation) => goBack()}>
