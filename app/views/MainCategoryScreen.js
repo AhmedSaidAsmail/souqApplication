@@ -24,6 +24,10 @@ export default class MainCategoryScreen extends React.Component {
         super(props);
         this.state = {
             index: 0,
+            scrollY: 0,
+            scrollTopOffset: 0,
+            viewMeasureY: 0,
+            viewMeasureHeight: 0,
         };
     }
 
@@ -47,21 +51,40 @@ export default class MainCategoryScreen extends React.Component {
             </TouchableOpacity>
         );
     }
+    _onScroll = (event) => {
+        // this.setState({scrollY: event.nativeEvent.contentOffset.y});
+        // this.viewRef.measure((x, y, width, height, px, py) => this.setState({
+        //     viewMeasureY: py,
+        //     viewMeasureHeight: height
+        // }));
+        // this.testRef.measure((x, y, width, height, px, py) => this.setState({scrollTopOffset: py}));
+    }
+
+    componentDidUpdate() {
+
+
+    }
 
     render() {
         return (
             <View style={style.container}>
                 <View style={style.categoryContainer}>
-                    <ScrollView showsVerticalScrollIndicator={false}>
+                    <ScrollView
+                        showsVerticalScrollIndicator={false}
+                        scrollEventThrottle={16}
+                        stickyHeaderIndices={[1, 3]}
+                    >
                         <View style={style.categoryBannerWrapper}>
                             <Image source={require('../../assets/images/slides/image_4.jpg')}
                                    style={style.categoryBanner}/>
                         </View>
+                        <View style={style.subCategoryTitleContainerWrapper}>
+                            <View style={style.subCategoryTitleContainer}>
+                                <Text style={style.subCategoryTitle}>موبايلات ذكية</Text>
+                                <Icon name="chevron-left" style={style.subCategoryTitleIcon}/>
+                            </View>
+                        </View>
                         <View style={style.subCategoryContainer}>
-                            <View style={style.subCategoryTitleContainer}>
-                                <Text style={style.subCategoryTitle}>موبايلات ذكية</Text>
-                                <Icon name="chevron-left" style={style.subCategoryTitleIcon}/>
-                            </View>
                             <View style={style.subCategoryItemsContainer}>
                                 <View style={style.subCategoryItem}>
                                     <View style={style.subCategoryItemImageWrapper}>
@@ -102,13 +125,13 @@ export default class MainCategoryScreen extends React.Component {
                                 </View>
                             </View>
                         </View>
-                        <View style={style.subCategoryContainer} onLayout={(event) => {
-                            alert(event.nativeEvent.layout.x)
-                        }}>
+                        <View style={style.subCategoryTitleContainerWrapper}>
                             <View style={style.subCategoryTitleContainer}>
-                                <Text style={style.subCategoryTitle}>موبايلات ذكية</Text>
+                                <Text style={style.subCategoryTitle}>موبايلات ذكية2</Text>
                                 <Icon name="chevron-left" style={style.subCategoryTitleIcon}/>
                             </View>
+                        </View>
+                        <View style={style.subCategoryContainer}>
                             <View style={style.subCategoryItemsContainer}>
                                 <View style={style.subCategoryItem}>
                                     <View style={style.subCategoryItemImageWrapper}>
@@ -149,6 +172,7 @@ export default class MainCategoryScreen extends React.Component {
                                 </View>
                             </View>
                         </View>
+                        <View style={{height: 700}}/>
                     </ScrollView>
                 </View>
                 <View style={style.categoryNavigation}>

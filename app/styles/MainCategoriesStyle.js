@@ -56,7 +56,6 @@ export default {
     categoryBannerWrapper: {
         height: 110,
         overflow: 'hidden',
-        marginBottom: 10,
     },
     categoryBanner: {
         flex: 1,
@@ -64,15 +63,14 @@ export default {
         height: null,
         resizeMode: 'cover',
     },
-    subCategoryContainer: {
-        backgroundColor: Colors.navigationGrey,
-        borderColor: Colors.lightGrey,
-        borderWidth: 1,
-        marginBottom: 20,
+    subCategoryTitleContainerWrapper: {
+        paddingTop: 15,
+        backgroundColor: '#ffffff',
     },
     subCategoryTitleContainer: {
-        borderBottomWidth: 1,
-        borderBottomColor: Colors.lightGrey,
+        backgroundColor: Colors.navigationGrey,
+        borderWidth: 1,
+        borderColor: Colors.lightGrey,
         padding: 10,
         position: 'relative',
     },
@@ -83,6 +81,16 @@ export default {
         position: 'absolute',
         top: 15,
         left: 10,
+    },
+    subCategoryContainer: {
+        backgroundColor: Colors.navigationGrey,
+        borderLeftColor: Colors.lightGrey,
+        borderLeftWidth: 1,
+        borderRightColor: Colors.lightGrey,
+        borderRightWidth: 1,
+        borderBottomColor: Colors.lightGrey,
+        borderBottomWidth: 1,
+        marginBottom: 20,
     },
     subCategoryItemsContainer: {
         flexDirection: 'row',
